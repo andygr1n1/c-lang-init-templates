@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g", // Include debug symbols
+                "${workspaceFolder}/debug.c", // Path to your C source file
+                "-o",
+                "${workspaceFolder}/debug", // Output executable
+                "-lcs50" // Link the cs50 library
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
